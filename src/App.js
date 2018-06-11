@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import YoutubePlayer from './YoutubePlayer'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+          <YoutubePlayer />
       </div>
     );
   }
