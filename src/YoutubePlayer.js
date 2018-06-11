@@ -11,27 +11,29 @@ class YoutubePlayer extends Component {
         }
     };
 
-    resaveVideo=(value)=>{
+    resaveVideo = (value) => {
         this.setState({
-            video : value
+            video: value
         })
     };
 
     render() {
         const opts = {
-            height: '390',
-            width: '640',
+            height: '680',
+            width: '1280',
             playerVars: {
                 autoplay: 1
             }
         };
         return (
             <div>
-                <YouTube
-                    videoId={this.state.video}
-                    opts={opts}
-                    onReady={this._onReady}
-                />
+                <div style={{float: 'left'}}>
+                    <YouTube
+                        videoId={this.state.video}
+                        opts={opts}
+                        onReady={this._onReady}
+                    />
+                </div>
                 <Todo changeVideo={this.resaveVideo}/>
             </div>
         );
